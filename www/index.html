@@ -13,7 +13,8 @@
         let ncmb = new NCMB(appKey, clientKey);
         let TestClass = ncmb.DataStore("RegisterTest2");
         let testRecord = new TestClass();
-        testRecord.set("message2", "hello, world");
+        testRecord.set("message2", "hello");
+        testRecord.set("country", "Japan");
         testRecord.save().then(function(m) {
             alert("success:" + JSON.stringify(m));
         }).catch(function(m) {
